@@ -1,5 +1,5 @@
 # NAR_2025
-Splicing single‑nucleotide variants (SNVs) with a **PriorityScore** (range –10 to 14). Values ≥1 are considered “screening‑positive.” This repository underpins our Nucleic Acids Research (NAR) 2025 submission.
+A scoring framework for splicing single‑nucleotide variants (SNVs) with a **PriorityScore** (range –10 to 14). Values ≥1 are considered “screening‑positive.” This repository underpins our Nucleic Acids Research (NAR) 2025 submission.
 
 ## Description
 
@@ -8,7 +8,13 @@ Splicing single‑nucleotide variants (SNVs) with a **PriorityScore** (range –
 ## Requirements
 - **Docker** (tested with version 27.2.1)  
 - **Nextflow** (tested with version 24.10.5.5935)
-- **wget
+- **bcftools** (tested with version bcftools 1.21, using htslib 1.21)
+
+#### For set up
+- **wget**
+- **git**
+
+We tested this workflow script on macOS (version 15.3.2) and Ubuntu (version 24.04.2).
 
 
 ## Installation and try our framework
