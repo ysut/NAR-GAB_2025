@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# lib/
 lib64/
 parts/
 sdist/
@@ -172,3 +172,17 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+# Resource files
+workflow/resources/Filtered*/
+workflow/resources/gencode*
+workflow/resources/plugin_resources/
+workflow/resources/spliceai/
+
+# Nextflow
+.nextflow*
+workflow/scripts/work/
+
+# macOS
+.DS_Store
