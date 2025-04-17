@@ -10,7 +10,7 @@ A scoring framework for splicing single‑nucleotide variants (SNVs) with a **Pr
 - **Nextflow** (tested with version 24.10.5.5935)
 - **bcftools** (tested with version bcftools 1.21, using htslib 1.21)
 
-#### For set up
+### For set up
 - **wget**
 - **git**
 
@@ -18,31 +18,32 @@ We tested this workflow script on macOS (version 15.3.2) and Ubuntu (version 24.
 
 
 ## Installation and try our framework
-
+### STEP 1. Clone this repository
 ```bash
 git clone https://github.com/ysut/NAR_2025.git
 ```
 
-#### STEP 1. Setup docker images
+### STEP 2. Setup docker images
 This step takes time.
 ```bash
 NAR_2025/workflow/docker/build_docker_images.sh
 ```
 
-#### STEP 2. Download VEP resources using docker images built above
+### STEP 3. Download VEP resources using docker images built above
 You can change the `vep_data` directry path where you like.
 Please run the command below and follow the comments displayed.
 ```bash
-docker run --rm -v vep_data:/data ps_vep:113.4 INSTALL.pl
+docker run --rm -v ${HOME}/vep_data:/data ps_vep:113.4 INSTALL.pl
 ```
 
-#### STEP 3. Download LOFTEE resources using a custom script.
+### STEP 3. Download LOFTEE resources using a custom script
 
-
-#### STEP 4. 
-
-
-#### Try framework
+### STEP 4. Download and filter the ClinVar's variant data
 ```bash
-nextflow main.nf --input_vcf ../examples/example.vcf.gz --output_dir ../examples
+cd resources && ./do
+```
+
+### Let's try a framework
+```bash
+nextflow main.nf --input_vcf ../examples/example.vcf.gz --output_dir ../examples --resources resources
 ```
