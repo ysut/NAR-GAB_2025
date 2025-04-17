@@ -176,6 +176,7 @@ cython_debug/
 
 # Resource files
 workflow/resources/Filtered*/
+workflow/resources/gencode*
 workflow/resources/plugin_resources/
 workflow/resources/spliceai/
 
