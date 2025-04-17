@@ -1,26 +1,42 @@
 # NAR_2025
 Splicing single‑nucleotide variants (SNVs) with a **PriorityScore** (range –10 to 14). Values ≥1 are considered “screening‑positive.” This repository underpins our Nucleic Acids Research (NAR) 2025 submission.
 
-## Features
+## Description
 
-- **In‑place VCF annotation**  
-  Reads an existing VCF, looks up per‑variant PriorityScores in a pandas DataFrame, and writes them into a new `INFO=PriorityScore` field without dropping any original columns or samples.
 
-- **High performance**  
-  - Uses a one‑time build of an in‑memory dict for O(1) lookups  
-  - Optional parallel DataFrame processing via `pandarallel`
 
-- **VCF compatibility**  
-  - Adds a proper `##INFO=<ID=PriorityScore,Number=1,Type=Integer,…>` header  
-  - Omits the tag entirely for missing scores (downstream `vcfanno` can `fill(0)`)
+## Requirements
+- **Docker** (tested with version 27.2.1)  
+- **Nextflow** (tested with version 24.10.5.5935)
+- **wget
 
-- **Extensible workflow**  
-  - Dynamic handling of new contigs (two‑pass header collection)  
-  - Easily integrated into larger Nextflow or Snakemake pipelines
 
-## Installation
+## Installation and try our framework
 
 ```bash
-git clone https://github.com/YourUser/NAR_2025.git
-cd NAR_2025
-pip install -r requirements.txt
+git clone https://github.com/ysut/NAR_2025.git
+```
+
+#### STEP 1. Setup docker images
+This step takes time.
+```bash
+NAR_2025/workflow/docker/build_docker_images.sh
+```
+
+#### STEP 2. Download VEP resources using docker images built above
+You can change the `vep_data` directry path where you like.
+Please run the command below and follow the comments displayed.
+```bash
+docker run --rm -v vep_data:/data ps_vep:113.4 INSTALL.pl
+```
+
+#### STEP 3. Download LOFTEE resources using a custom script.
+
+
+#### STEP 4. 
+
+
+#### Try framework
+```bash
+nextflow main.nf --input_vcf ../examples/example.vcf.gz --output_dir ../examples
+```
