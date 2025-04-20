@@ -14,7 +14,7 @@ A scoring framework for splicing single‑nucleotide variants (SNVs) with a **Pr
 - **wget**
 - **git**
 
-We tested this workflow script on macOS (version 15.3.2) and Ubuntu (version 24.04.2).
+We tested this workflow script on Intel Mac (MacOS version 15.3.2) with Inel CPU and Ubuntu (version 24.04.2).
 
 
 ## Installation and try our framework
@@ -26,7 +26,11 @@ git clone https://github.com/ysut/NAR_2025.git
 ### STEP 2. Setup docker images
 This step takes time.
 ```bash
-NAR_2025/workflow/docker/build_docker_images.sh
+# Move to docker directry in this repository
+cd NAR_2025/workflow/docker
+
+# Run setup shell script for build docker images
+./build_docker_images.sh
 ```
 
 ### STEP 3. Download VEP resources using docker images built above
