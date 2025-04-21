@@ -8,12 +8,13 @@ WORKDIR /opt
 RUN groupadd -r psscoring && \
     useradd -r -g psscoring -m -d /home/psscoring psscoring
 
-COPY ./environment.yaml ./
+COPY ./environment.*.yaml ./
 RUN set -ex \
+    && uname_m=$(uname -m) \
     && conda update --name base --channel conda-forge conda \
-    && conda env create --file environment.yaml \
+    && conda env create --file environment.${uname_m}.yaml \
     && conda clean --force-pkgs-dirs --all --yes \
-    && rm ./environment.yaml \
+    && rm ./environment.*.yaml \
     && echo "conda activate ${CONDA_DEFAULT_ENV}" >> ~/.bashrc
 
 # Copy the scoring script
