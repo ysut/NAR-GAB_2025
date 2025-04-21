@@ -55,5 +55,4 @@ A `nextflow.config` file is located in `NAR_2025/workflow/scripts`.
 
 ### Let's try a framework
 ```bash
-nextflow ${WF}/scripts/main.nf --input_vcf ${WF}/examples/example.vcf.gz --output_dir ${WF}/examples --resources ${RC}
-```
+nextflow ${WF}/scripts/main.nf --input_vcf ${WF}/examples/example.vcf.gz --output_dir ${WF}/examples
