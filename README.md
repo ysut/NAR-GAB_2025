@@ -43,14 +43,14 @@ cd ${RC}
 ./setup_vep_resources.sh
 ```
 
-### STEP 4. Download and filter the ClinVar's variant data
+### STEP 5. Download and filter the ClinVar's variant data
 ```bash
 cd ${RC}
 ./generate_clinvar_dataset.sh
 ```
 
-### STEP 5. Edit the nextflow.config file
-Please edit five paths, i.e., reference, annotation_gtf, vep_data, vep_plugin_resources, and ps_resources.
+### STEP 6. Edit the nextflow.config file
+Please edit five paths, i.e., `reference`, `annotation_gtf`, `vep_data`, `vep_plugin_resources`, and `ps_resources`.
 A `nextflow.config` file is located in `NAR_2025/workflow/scripts`.
 
 ### Let's try a framework
