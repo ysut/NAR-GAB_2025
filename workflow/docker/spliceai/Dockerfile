@@ -38,10 +38,11 @@ RUN set -ex \
     && echo ". ${CONDA_DIR}/etc/profile.d/conda.sh && conda activate base" >> ~/.bashrc
 
 # Install conda packages using environment.yml
-COPY ./environment.yaml ./
+COPY ./environment.*.yaml ./
 RUN set -ex \
+    && uname_m=$(uname -m) \
     && conda update --name base --channel conda-forge conda \
-    && conda env create --file environment.yaml \
+    && conda env create --file environment.${uname_m}.yaml \
     && conda clean --force-pkgs-dirs --all --yes \
     && rm -rf /usr/tools/tmp
 

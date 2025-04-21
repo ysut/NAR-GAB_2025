@@ -177,6 +177,7 @@ cython_debug/
 # Resource files
 workflow/resources/Filtered*/
 workflow/resources/gencode*
+workflow/resources/ccrs.*
 workflow/resources/plugin_resources/
 workflow/resources/spliceai/
 
@@ -186,3 +187,7 @@ workflow/scripts/work/
 
 # macOS
 .DS_Store
+
+# DEBUG
+*.old.*
+workflow/docker/test/SpliceAI/
