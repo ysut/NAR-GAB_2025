@@ -16,15 +16,16 @@ We tested this workflow script on Intel Mac (MacOS version 15.3.2) with Inel CPU
 ### STEP 1. Clone this repository
 ```bash
 git clone https://github.com/ysut/NAR_2025.git
-WF="NAR_2025/workflow"           # Set the path to workflow dictory
-RC="NAR_2025/workflow/resources"  # Set the path to resources directory 
+wd=$(pwd)
+wf="${wd}/NAR_2025/workflow"           # Set the path to workflow dictory
+rc="${wd}/NAR_2025/workflow/resources"  # Set the path to resources directory 
 ```
 
 ### STEP 2. Setup docker images
 This step takes time.
 ```bash
 # Move to docker directry in this repository
-cd ${WF}/docker
+cd ${wf}/docker
 
 # Run setup shell script for build docker images
 ./build_docker_images.sh
@@ -39,13 +40,13 @@ docker run -it --rm -v ${HOME}/vep_data:/data ps_vep:113.4 INSTALL.pl
 
 ### STEP 4. Download LOFTEE resources
 ```bash
-cd ${RC}
+cd ${rc}
 ./setup_vep_resources.sh
 ```
 
 ### STEP 5. Download and filter the ClinVar's variant data
 ```bash
-cd ${RC}
+cd ${rc}
 ./generate_clinvar_dataset.sh
 ```
 
@@ -55,4 +56,4 @@ A `nextflow.config` file is located in `NAR_2025/workflow/scripts`.
 
 ### Let's try a framework
 ```bash
-nextflow ${WF}/scripts/main.nf --input_vcf ${WF}/examples/example.vcf.gz --output_dir ${WF}/examples
+nextflow ${wf}/scripts/main.nf --input_vcf ${wf}/examples/example.vcf.gz --output_dir ${wf}/examples
