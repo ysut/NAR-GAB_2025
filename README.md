@@ -32,11 +32,13 @@ cd ${wf}/docker
 ```
 
 ### STEP 3. Download VEP resources using docker images built above
-You can change the `vep_data` directory path to any location you prefer.
-Then run the following command and follow the on‑screen instructions.
+Please run the following command and follow the on‑screen instructions and select a number for `homo_sapiens_merged_vep_113_GRCh37.tar.gz`. 
 ```bash
 docker run -it --rm -v ${HOME}/vep_data:/data ps_vep:113.4 INSTALL.pl
 ```
+💡 The path of `${HOME}/vep_data` is an example.  
+You can change the `vep_data` directory path to any location you prefer.
+
 
 ### STEP 4. Download LOFTEE resources
 ```bash
