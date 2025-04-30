@@ -32,7 +32,8 @@ cd ${wf}/docker
 ```
 
 ### STEP 3. Download VEP resources using docker images built above
-Please run the following command and follow the on‑screen instructions and select a number for `homo_sapiens_merged_vep_113_GRCh37.tar.gz`. 
+Run the following command and follow the on‑screen instructions.  
+Then, please select a number for `homo_sapiens_merged_vep_113_GRCh37.tar.gz`. 
 ```bash
 docker run -it --rm -v ${HOME}/vep_data:/data ps_vep:113.4 INSTALL.pl
 ```
