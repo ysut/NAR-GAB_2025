@@ -1,5 +1,5 @@
-# NAR_2025
-A scoring framework for splicing single‑nucleotide variants (SNVs) with a **PriorityScore** (range –10 to 14). Values ≥1 are considered “screening‑positive.” This repository underpins our Nucleic Acids Research (NAR) 2025 submission.
+# NAR-GAB_2025
+A scoring framework for splicing single‑nucleotide variants (SNVs) with a **PriorityScore** (range –10 to 14). Values ≥1 are considered “screening‑positive.” This repository underpins our Nucleic Acids Research Genomics and Bioinformatics 2025 submission.
 
 ## Requirements
 - **Docker** (tested with version 27.2.1)  
@@ -10,15 +10,15 @@ A scoring framework for splicing single‑nucleotide variants (SNVs) with a **Pr
 - **wget** or **curl**
 - **git**
 
-We tested this workflow script on Intel Mac (MacOS version 15.3.2) with Inel CPU and Ubuntu (version 24.04.2).
+We tested this workflow script on Intel Mac (MacOS version 15.3.2) and Ubuntu (version 24.04.2).
 
 ## Installation and try our framework
 ### STEP 1. Clone this repository
 ```bash
 git clone https://github.com/ysut/NAR_2025.git
 wd=$(pwd)
-wf="${wd}/NAR_2025/workflow"           # Set the path to workflow dictory
-rc="${wd}/NAR_2025/workflow/resources"  # Set the path to resources directory 
+wf="${wd}/NAR-GAB_2025/workflow"           # Set the path to workflow dictory
+rc="${wd}/NAR-GAB_2025/workflow/resources"  # Set the path to resources directory 
 ```
 
 ### STEP 2. Setup docker images
