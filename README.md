@@ -52,7 +52,7 @@ cd ${rc}
 
 ### STEP 6. Edit the nextflow.config file
 Please edit five paths, i.e., `reference`, `annotation_gtf`, `vep_data`, `vep_plugin_resources`, and `ps_resources`.
-A `nextflow.config` file is located in `NAR_2025/workflow/scripts`.
+A `nextflow.config` file is located in `NAR-GAB_2025/workflow/scripts`.
 
 ### Let's try a framework
 ```bash
