@@ -1,5 +1,7 @@
 # NAR-GAB_2025
-A scoring framework for splicing single‑nucleotide variants (SNVs) with a **PriorityScore** (range –10 to 14). Values ≥1 are considered “screening‑positive.” This repository underpins our Nucleic Acids Research Genomics and Bioinformatics 2025 submission.
+A scoring framework for splicing single‑nucleotide variants (SNVs) with a **PriorityScore** (range –10 to 14). Values ≥1 are considered “screening‑positive.” This repository underpins our Nucleic Acids Research Genomics and Bioinformatics 2025 submission.  
+- DOI: [10.1093/nargab/lqaf180](https://doi.org/10.1093/nargab/lqaf180)  
+- EGA accession ID: **EGAD50000002100**
 
 ## Requirements
 - **Docker** (tested with version 27.2.1)  
